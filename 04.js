@@ -1,10 +1,8 @@
 import fs from 'fs';
+//const fs = require('fs');
 
-export const Renombrar = (path, newpath) => {
-
-    fs.rename(path, newpath, () => {
-
-        console.log("\nArchivo renombrado\n");
-    })
-
-}
+fs.rename('.texto.txt', 'renombrado.txt', (error) => {
+    if(error){
+        throw error;
+    }
+});
